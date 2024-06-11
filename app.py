@@ -11,8 +11,11 @@ st.write("You picked " + pick)
 startDate = st.sidebar.date_input("Pick a start date")
 endDate = st.sidebar.date_input("Pick an end date")
 
-df = pd.read_csv(pick + ".csv", parse_dates=['Date'])
-st.write(df)
+def grabdata():
+  df = pd.read_csv(pick + ".csv", parse_dates=['Date'])
+  return df
+
+df = grabData()
 
 dayStart = '{:%Y-%m-%d}'.format(startDate)
 dayEnd = '{:%Y-%m-%d}'.format(endDate)
