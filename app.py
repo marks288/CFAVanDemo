@@ -5,4 +5,4 @@ st.title('DEMO')
 
 tickers = ['AAPL', 'NFLX']
 pick = st.selectbox("Pick ticker", tickers)
-st.write("You picked " + pick
+st.write("You picked " + pick)
