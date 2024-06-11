@@ -24,5 +24,5 @@ filterDF = df[df['Date'].between(dayStart, dayEnd)]
 columns = ['Open', 'Close', 'High', 'Low']
 series = st.sidebar.selectbox("Pick a column to plot", columns)
 
-fig = px.line(filterDF, x='Date', y='Close')
+fig = px.line(filterDF, x='Date', y='series')
 st.plotly_chart(fig)
