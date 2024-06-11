@@ -11,7 +11,7 @@ st.write("You picked " + pick)
 startDate = st.sidebar.date_input("Pick a start date")
 endDate = st.sidebar.date_input("Pick an end date")
 
-def grabdata():
+def grabData():
   df = pd.read_csv(pick + ".csv", parse_dates=['Date'])
   return df
 
