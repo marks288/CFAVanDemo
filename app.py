@@ -14,5 +14,9 @@ endDate = st.sidebar.date_input("Pick an end date")
 df = pd.read_csv(pick + ".csv", parse_dates=['Date'])
 st.write(df)
 
+dayStart = '{:%Y-%m-%d}'.format(startDate)
+dayEnd = '{:%Y-%m-%d}'.format(endDate)
+filterDF = df[df['Date'].between(dayStart, dayEnd)]
+
 fig = px.line(df, x='Date', y='Close')
 st.plotly_chart(fig)
